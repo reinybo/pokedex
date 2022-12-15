@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/normalize.css" />
+    <link rel="stylesheet" href="/skeleton.css" />
+    <title>Document</title>
+</head>
+<body>
+    <h1>New Page</h1>
+    <form action="/pokemon" method="POST">
+        Name: <input type="text" name="name"/> <br />
+        Image: <input type="text" name="img"/> <br>
+        Types: <br><select name="type" size="18" multiple>
+            <option value="normal">normal</option>
+            <option value="fire">fire</option>
+            <option value="water">water</option>
+            <option value="grass">grass</option>
+          </select> <br>
+        Stats: <br>
+               hp: <input type="text" name="hp"/> <br>
+               attack: <input type="text" name="attack"/> <br>
+               defense: <input type="text" name="defense"/> <br>
+        <input type="submit" value="Create Pokemon" />
+    </form>
+</body>
+</html>

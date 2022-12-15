@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Pokemon Edit Page</title>
+    <link rel="stylesheet" href="/normalize.css" />
+    <link rel="stylesheet" href="/skeleton.css" />
+  </head>
+  <body>
+    <h1>Edit Pokemon</h1>
+    <form action="/pokemon/<%=index%>?_method=PUT" method="POST">
+      Name: <input type="text" name="name" value="<%=pokemon.name%>" /><br />
+      Image: <input type="text" name="img" value="<%=pokemon.img%>" /><br />
+      Type: <input type="text" name="type" value="<% for (let i=0; i<pokemon.type.length; i++) { %> 
+                                                  <%= pokemon.type[i] %> 
+                                                  <% } %> " /><br />
+      HP: <input type="text" name="HP" value="<%=pokemon.stats.hp%>" /><br />
+      Attack: <input type="text" name="Attack" value="<%=pokemon.stats.attack%>" /><br />
+      Defense: <input type="text" name="Defense" value="<%=pokemon.stats.defense%>" /><br />
+      <br />
+      <input type="submit" name="" value="Submit Changes" />
+    </form>
+  </body>
+</html>
+
+<style>
+  body {
+    text-align: center;
+  }
+</style>

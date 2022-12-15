@@ -4,20 +4,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/normalize.css" />
+    <link rel="stylesheet" href="/skeleton.css" />
     <title>show page</title>
 </head>
 <body>
     <h1><%= pokemon.name %> </h1>
     <img src="<%= pokemon.img %> " alt="pokemon image">
     <ul>
-        <li>Types:</li>
+        <li id="broad">Types:</li>
         <ul> <% for (let i=0; i<pokemon.type.length; i++) { %> 
             <li>
             <%= pokemon.type[i] %> 
             </li>
             <% } %> 
         </ul>
-        <li>Stats:</li>
+        <li id="broad">Stats:</li>
         <ul> 
             <li>HP: <%= pokemon.stats.hp %></li>
             <li>Attack: <%= pokemon.stats.attack %></li>
@@ -26,3 +28,14 @@
     </ul>
 </body>
 </html>
+
+<style>
+    body {
+        text-align: center;
+        font-size: large;
+    }
+
+    #broad {
+        list-style: none;
+    }
+</style>
